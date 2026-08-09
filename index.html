@@ -371,25 +371,22 @@
     margin-bottom:8px;
   }
 
-  /* video slot */
-  .video-slot{
-    border:1px dashed var(--line);
+  /* youtube embed (responsive 16:9) */
+  .video-embed{
+    position:relative;
+    width:100%;
+    padding-top:56.25%;
     border-radius:var(--radius);
+    overflow:hidden;
+    border:1px solid var(--line-soft);
     background:var(--surface);
-    min-height:180px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    padding:24px;
-    text-align:center;
-    transition:border-color .2s ease, background .2s ease;
   }
-  .video-slot:hover{ border-color:var(--gold); background:var(--surface-2); }
-  .video-slot svg{ width:28px; height:28px; opacity:0.7; color:var(--gold); }
-  .video-slot .vt{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--muted); }
-  .video-slot .vt b{ color:var(--gold-light); }
+  .video-embed iframe{
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    border:0;
+  }
 
   /* footer */
   footer{ padding:52px 0 64px; border-top:1px solid var(--line-soft); text-align:center; }
@@ -524,9 +521,8 @@
       <p class="warmup-note">Enchaîne les 4 exercices sans repos additionnel entre eux.</p>
 
       <!-- VIDÉO : Échauffement - enchaînement complet des 4 exercices -->
-      <div class="video-slot" style="margin-top:18px;">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4v16l14-8L5 4z" fill="currentColor" stroke="none"/></svg>
-        <span class="vt"><b>Zone vidéo</b> — Échauffement (enchaînement complet)</span>
+      <div class="video-embed" style="margin-top:18px;">
+        <iframe src="https://www.youtube.com/embed/ID_ECHAUFFEMENT" title="Échauffement" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -573,9 +569,8 @@
             <p>Pieds au sol, mains au sol, hanches le plus haut possible au-dessus des
               épaules, dos plat.</p>
             <!-- VIDÉO : Handstand Variante 1 - Pike hold -->
-            <div class="video-slot">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4v16l14-8L5 4z" fill="currentColor" stroke="none"/></svg>
-              <span class="vt"><b>Zone vidéo</b> — Variante 1</span>
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/ID_VARIANTE_1" title="Handstand Variante 1 - Pike hold" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
 
@@ -585,9 +580,8 @@
               des épaules, dos plat. Cherche à redresser le dos et à pousser le bassin vers
               le plafond.</p>
             <!-- VIDÉO : Handstand Variante 2 - Pike hold pieds surélevés -->
-            <div class="video-slot">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4v16l14-8L5 4z" fill="currentColor" stroke="none"/></svg>
-              <span class="vt"><b>Zone vidéo</b> — Variante 2</span>
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/ID_VARIANTE_2" title="Handstand Variante 2 - Pike hold pieds surélevés" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
 
@@ -595,9 +589,8 @@
             <div class="stage-head"><span class="stage-badge">Variante 3</span><h4>Handstand dos au mur</h4></div>
             <p>Handstand dos au mur, gainage complet, ligne droite talons–hanches–épaules–poignets.</p>
             <!-- VIDÉO : Handstand Variante 3 - Handstand dos au mur -->
-            <div class="video-slot">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4v16l14-8L5 4z" fill="currentColor" stroke="none"/></svg>
-              <span class="vt"><b>Zone vidéo</b> — Variante 3</span>
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/ID_VARIANTE_3" title="Handstand Variante 3 - Handstand dos au mur" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
 
@@ -606,9 +599,8 @@
             <p>Depuis une planche, pieds contre le mur, monte progressivement jusqu'à te
               retrouver en handstand face au mur.</p>
             <!-- VIDÉO : Handstand Variante 4 - Handstand face au mur -->
-            <div class="video-slot">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4v16l14-8L5 4z" fill="currentColor" stroke="none"/></svg>
-              <span class="vt"><b>Zone vidéo</b> — Variante 4</span>
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/ID_VARIANTE_4" title="Handstand Variante 4 - Handstand face au mur" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
 
@@ -617,9 +609,8 @@
             <p>Depuis le handstand dos au mur, tentative de décollage contrôlé (mur comme filet
               de sécurité).</p>
             <!-- VIDÉO : Handstand Variante 5 - Handstand dos au mur tentative -->
-            <div class="video-slot">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4v16l14-8L5 4z" fill="currentColor" stroke="none"/></svg>
-              <span class="vt"><b>Zone vidéo</b> — Variante 5</span>
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/ID_VARIANTE_5" title="Handstand Variante 5 - tentative" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
 
@@ -627,9 +618,8 @@
             <div class="stage-head"><span class="stage-badge">Variante 6</span><h4>Handstand</h4></div>
             <p>Libre, sans mur — c'est le moment de tenter et de travailler le vrai handstand.</p>
             <!-- VIDÉO : Handstand Variante 6 - Handstand libre -->
-            <div class="video-slot">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4v16l14-8L5 4z" fill="currentColor" stroke="none"/></svg>
-              <span class="vt"><b>Zone vidéo</b> — Variante 6</span>
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/ID_VARIANTE_6" title="Handstand Variante 6 - Handstand libre" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -648,10 +638,8 @@
           </div>
 
           <!-- VIDÉO : Exercice 2 - Overhead Press haltères debout -->
-          <!-- VIDÉO : Exercice 2 - Overhead Press haltères debout -->
-          <div class="video-slot">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4v16l14-8L5 4z" fill="currentColor" stroke="none"/></svg>
-            <span class="vt"><b>Zone vidéo</b> — Exercice 2</span>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/ID_OVERHEAD_PRESS" title="Overhead Press haltères debout" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </article>
@@ -672,9 +660,8 @@
           </ul>
 
           <!-- VIDÉO : Exercice 3 - Kettlebell Halo -->
-          <div class="video-slot">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4v16l14-8L5 4z" fill="currentColor" stroke="none"/></svg>
-            <span class="vt"><b>Zone vidéo</b> — Exercice 3</span>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/ID_KETTLEBELL_HALO" title="Kettlebell Halo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </article>
@@ -711,9 +698,8 @@
           </div>
 
           <!-- VIDÉO : Exercice 4 - Superset complet (4a + 4b enchaînés) -->
-          <div class="video-slot">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4v16l14-8L5 4z" fill="currentColor" stroke="none"/></svg>
-            <span class="vt"><b>Zone vidéo</b> — Exercice 4 (superset complet)</span>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/ID_SUPERSET_COIFFE" title="Superset coiffe des rotateurs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </article>
@@ -731,9 +717,8 @@
           </div>
 
           <!-- VIDÉO : Exercice 5 - Lateral Raises -->
-          <div class="video-slot">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4v16l14-8L5 4z" fill="currentColor" stroke="none"/></svg>
-            <span class="vt"><b>Zone vidéo</b> — Exercice 5</span>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/ID_LATERAL_RAISES" title="Lateral Raises" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </article>
